@@ -3,6 +3,14 @@ body {
 	background-color: #4b116f;
 }
 
+#students {
+	display: none;
+}
+
+#students img {
+
+}
+
 /* 4-column Grid */
 @media screen and (min-width: 720px) {
 	.twenty-five {
@@ -16,11 +24,37 @@ body {
 		margin-right: 13px;
 		margin-left: 13px;	
 	}
+	
+	.virtual-tours, .faq, .contract-terms, .contact-us {
+		width: 50%;
+		float: left;
+	}
 }
 
 @media screen and (min-width: 960px) {
 	header, article, #twoway {
 		width: 960px;	
+	}
+	
+	#students {
+		display: block;
+		margin-top: -70px;
+		width: 722px;
+	}
+	
+	#students img {
+		position: relative;
+		top: 4px;
+	}
+	
+	#button {
+		display: inline-block;
+		float: right;	
+		margin-top: -70px
+	}
+	
+	#button img {
+		
 	}
 }
 
@@ -28,15 +62,27 @@ body {
 header, article, #twoway {
 	clear: both;	
 	margin: auto;
-	padding-bottom: 2em;
+}
+
+article .wrapper {
+margin-bottom: 1em;	
 }
 
 header {
 	padding-top: 1.5em;	
+	margin-bottom: 2em;
+}
+
+.center {
+	margin-left: auto !important;
+    margin-right: auto !important;
+    position: relative;
+    width: 370px !important;
 }
 
 .center .wrapper {
-	
+	text-align: center;
+    width: auto !important;
 }
 
 .important-dates {
@@ -45,11 +91,20 @@ header {
 	
 }
 
-.important-dates h2 {
-	color: #4b116f;
+/*TYPOGRAPHY*/
+
+body {
+	line-height: 1.15em;	
 }
 
-/*TYPOGRAPHY*/
+a:link, a:visited, a:focus, a:active {
+	color: #FFFFFF;
+	text-decoration: none;	
+}
+
+a:hover {
+	color: #FFCC00;	
+}
 
 body {
 	font-family: "Bitter";
@@ -80,6 +135,10 @@ table p {
 	color: #000000;	
 }
 
+.important-dates h2 {
+	color: #4b116f;
+}
+
 .open-house h3 {
 	color: #FFFFFF;
 	font-style: italic;	
@@ -98,3 +157,5 @@ table .date {
 table .description {
 	width: 65%;
 }
+
+/* MISC */
