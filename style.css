@@ -1,9 +1,11 @@
 /* GLOBAL */
 body {
-	background-color: #4b116f;
+	background-color: #4B116F;
+    background-image: url("assets/background.png");
+    background-repeat: repeat-x;
 }
 
-#students {
+#students, #mobile-students {
 	display: none;
 }
 
@@ -29,6 +31,14 @@ body {
 		width: 50%;
 		float: left;
 	}
+	
+	#button {
+		text-align: right;	
+	}
+	
+	#button img {
+			
+	}
 }
 
 @media screen and (min-width: 960px) {
@@ -38,6 +48,7 @@ body {
 	
 	#students {
 		display: block;
+		float: left;
 		margin-top: -70px;
 		width: 722px;
 	}
@@ -49,12 +60,40 @@ body {
 	
 	#button {
 		display: inline-block;
-		float: right;	
-		margin-top: -70px
+		float: right;
 	}
 	
 	#button img {
 		
+	}
+	
+	#subheader {
+		display: inline-block;
+	}
+}
+
+@media screen and (max-width: 960px) {
+	#mobile-students {
+		display: inline-block;
+		float: left;
+		width: 65%;
+	}
+
+	#button {
+		float: right;
+		width: 35%;
+	}
+	
+	#button img {
+		float: right;	
+	}
+	
+	#subheader {
+		display: block;
+	}
+	
+	.first {
+		padding-top: 20px;	
 	}
 }
 
@@ -116,7 +155,11 @@ h1 {
 }
 
 h2 {
-	font-size: 1.2em;	
+	font-size: 1.3em;	
+}
+
+h3 {
+	font-size: .85em;	
 }
 
 h2, h3 {
@@ -128,7 +171,7 @@ h2, h3 {
 
 p {
 	color: #ffffff;	
-	font-size: .8em;
+	font-size: .85em;
 }
 
 table p {
@@ -159,3 +202,11 @@ table .description {
 }
 
 /* MISC */
+
+.first {
+	
+}
+
+.open-house {
+	
+}
