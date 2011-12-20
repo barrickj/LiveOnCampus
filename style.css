@@ -1,4 +1,11 @@
 /* GLOBAL */
+
+img {
+    border: 0 none;
+    height: auto;
+    max-width: 100%;
+}
+
 body {
 	background-color: #4B116F;
     background-image: url("assets/background.png");
@@ -57,7 +64,7 @@ body {
 	}
 	
 	h2 {
-		font-size: 1em;	
+		font-size: 1em !important;	
 	}
 }
 
