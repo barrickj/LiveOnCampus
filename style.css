@@ -183,7 +183,7 @@ header {
 /*TYPOGRAPHY*/
 
 body {
-	line-height: 1.25em;	
+	line-height: 1.05em;	
 }
 
 a:link, a:visited, a:focus, a:active {
@@ -221,7 +221,7 @@ h2, h3 {
 
 p {
 	color: #ffffff;	
-	font-size: .85em;
+	font-size: .75em;
 }
 
 table tr {
