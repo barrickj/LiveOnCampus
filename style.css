@@ -112,7 +112,8 @@ body {
 
 .virtual-tours, .faq, .contract-terms, .contact-us {
 	*float: left;
-	*width: 20%;	
+	*width: 20%;
+	min-height: 180px;
 }
 
 .first, .second {
