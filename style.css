@@ -262,13 +262,11 @@ table .description {
 
 #recontracting-text {
 	color: #FFFFFF;
-    font-size: 81%;
+    font-size: 75%;
     font-weight: bold;
     left: -4%;
     position: relative;
     text-align: right;
-    top: -13px;
-	*top: -9px;
 }
 
 /* MISC */
