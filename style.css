@@ -12,10 +12,6 @@ body {
     background-repeat: repeat-x;
 }
 
-#students img {
-
-}
-
 /* 4-column Grid */
 @media screen and (min-width: 720px) {
 	.twenty-five {
@@ -48,7 +44,7 @@ body {
 	}
 	
 	#button {
-		text-align: right;	
+		text-align: right;
 	}
 	
 	#button img {
@@ -66,6 +62,14 @@ body {
 	h2 {
 		font-size: 1em !important;	
 	}
+	
+	#button {
+		width: 35% !important;
+	}
+	
+	#students {
+		width: 65% !important;	
+	}
 }
 
 @media screen and (min-width: 960px) {
@@ -78,6 +82,53 @@ body {
 	.first {
 	
 	}
+}
+/* IE FIXES */
+
+.twoway {
+	*width:960px;	
+}
+
+#button {
+	margin-bottom: 20px;
+}
+
+.recontract-2012, .open-house {
+	*display: block;
+	*width: 22%;
+	*float: left;	
+}
+
+.important-dates {
+	box-shadow: 0 0 6px #000000;
+	-webkit-box-shadow: 0px 0px 6px #000000;
+	-moz-box-shadow: 0px 0px 6px #000000;
+	*display: block;
+	*width: 43%;
+	*float: left;	
+}
+
+.open-house {
+	*float: right;	
+}
+
+.seven-twenty-show {
+	*display: none;	
+}
+
+.virtual-tours, .faq, .contract-terms, .contact-us {
+	*float: left;
+	*width: 20%;	
+}
+
+.first, .second {
+	*position: relative;
+	*top: -40px;
+}
+
+.faq-button {
+	*position: relative;
+	*top: -50px;
 }
 
 /* GRID */
@@ -107,8 +158,10 @@ header {
 
 #subheader #students {
 	display: inline-block;
-    width: 75%;
-	margin-top: -7%;
+    float: left;
+    margin-top: -7%;
+    position: relative;
+    width: 74%;
 }
 
 #subheader #students img {
@@ -128,7 +181,7 @@ header {
 /*TYPOGRAPHY*/
 
 body {
-	line-height: 1.15em;	
+	line-height: 1.25em;	
 }
 
 a:link, a:visited, a:focus, a:active {
@@ -169,8 +222,16 @@ p {
 	font-size: .85em;
 }
 
-table p {
+table tr {
+	line-height: 1.25em;	
+}
+
+table p, table a:link, table a:visited, table a:active {
 	color: #000000;	
+}
+
+table a:hover {
+	color: #4b116f;	
 }
 
 .important-dates h2 {
@@ -196,21 +257,25 @@ table .description {
 	width: 65%;
 }
 
+#recontracting-text {
+	color: #FFFFFF;
+    font-size: 81%;
+    font-weight: bold;
+    left: -4%;
+    position: relative;
+    text-align: right;
+    top: -13px;
+	*top: -9px;
+}
+
 /* MISC */
 
-.first {
-	
-}
-
-#faq-button {
-	background-image: url(assets/FAQ.png);
-	background-repeat: no-repeat;
-}
-
-#faq-button:hover {
-	background-image:url(assets/FAQ-hover.png);
-}
 
 .faq-button {
 	text-align: center;
+}
+
+#uni-dor {
+	*position: relative;
+	*top: 50px;	
 }

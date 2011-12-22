@@ -21,14 +21,10 @@
         <link rel="stylesheet" href="style.css"/> <!-- LiveOnCampus style overrides -->
         
         <!--<script src="respond.min.js"></script>  https://github.com/scottjehl/Respond -->
-        <script src="html5.js"></script>
         
-        <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
         
-        <link href='http://fonts.googleapis.com/css?family=Bitter:400,700' rel='stylesheet' type='text/css'> <!-- GOOGLE FONTS / CHANGE LATER -->
-		
-		<!-- Here's Golden Gridlet, the grid overlay script. 
-		<script src="GGS.js"></script>-->
+        <link href='http://fonts.googleapis.com/css?family=Bitter:400,700' rel='stylesheet' type='text/css'>
 		
 		<!-- 
 			This script enables structural HTML5 elements in old IE.
@@ -37,19 +33,43 @@
 		<!--[if lt IE 9]>
 			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
+        
+    <script type="text/javascript">
+		function MM_swapImgRestore() { //v3.0
+		  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+		}
+		function MM_preloadImages() { //v3.0
+		  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+			var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+			if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+		}
+		
+		function MM_findObj(n, d) { //v4.01
+		  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+			d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+		  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+		  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+		  if(!x && d.getElementById) x=d.getElementById(n); return x;
+		}
+		
+		function MM_swapImage() { //v3.0
+		  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+		   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+		}
+    </script>
 	</head>
 	
-	<body lang="en">
+	<body lang="en" onLoad="MM_preloadImages('assets/FAQ-hover.png','assets/more-choices-buttons-hover.png','assets/more-choices_better-choices-hover.png')">
 		
 		<!-- Demo code begins -->
 		
 		<header>
 			<div class="wrapper">
-            	<img src="assets/uni-dor-stamp.png" alt="UNI Department of Residence" />
+            	<img id="uni-dor" src="assets/uni-dor-stamp.png" alt="UNI Department of Residence" />
 				<h1><img src="assets/live-on-campus.png" alt="Live On Campus" /></h1>
                 	<div id="subheader">
-                        <div id="students"><img src="assets/students.png" alt="Group portrait of UNI Students" /></div>
-                        <div id="button" class 25><a href="http://www.google.com"><img src="assets/more-choices-buttons.png" alt="More choices, better choices. Live on campus - 2012-13" /></a></div>
+                        <div id="students"><img src="assets/students.png" alt="Group portrait of UNI Students" /><br><div id="recontracting-text">To begin recontracting, click here</div></div>
+                        <div id="button" class 25><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('MoreChoices2012-2013','','assets/more-choices-buttons-hover.png',1)"><img src="assets/more-choices-buttons.png" alt="More choices, better choices. Live on campus: 2012-13" name="MoreChoices2012-2013" width="241" height="158" border="0"></a></div>
                 
                 	</div>
 			</div>
@@ -58,12 +78,12 @@
         <article id="twoway" class="first">
         	<section class="wrapper twenty-five recontract-2012 seven-twenty-hide">
             	<h2>Recontracting 2012</h2>
-                <img src="assets/more-choices_better-choices.png" alt="More Choices - Better Choices" />
-                <p><a href="http://www.google.com">Single Rooms</a></p>
-                <p><a href="http://www.google.com">Double Room</a></p>
-                <p><a href="http://www.google.com">2, 4, 6-person Apartment Suites</a></p>
-                <p><a href="http://www.google.com">Suites</a></p>
-                <p><a href="http://www.google.com">Meal Plans</a></p>
+                <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('MoreChoicesBetterChoices','','assets/more-choices_better-choices-hover.png',1)"><img src="assets/more-choices_better-choices.png" name="MoreChoicesBetterChoices" width="168" height="90" border="0"></a><br>
+                <p><a href="#">Single Rooms</a></p>
+                <p><a href="#">Double Room</a></p>
+                <p><a href="#">2, 4, 6-person Apartment Suites</a></p>
+                <p><a href="#">Suites</a></p>
+                <p><a href="#">Meal Plans</a></p>
             </section>
             
             <section class="wrapper fifty important-dates">
@@ -72,23 +92,25 @@
                   <h2>Important Dates</h2>
                   <tr>
                     <td class="date"><p>Wed., January 18</p></td>
-                    <td class="description"><p>Panther Profile Opens<br>Panther Picks Opens<br>Priority Schedule Announced</p></td>
+                    <td class="description"><p><a href="#">Panther Profile Opens</a><br>
+                      <a href="#">Panther Picks Opens</a><br>
+                    <a href="#">Priority Schedule Announced</a></p></td>
                   </tr>
                   <tr>
                     <td class="date"><p>Fri., January 20</p></td>
-                    <td class="description"><p>Open House Events</p></td>
+                    <td class="description"><p><a href="#">Open House Events</a></p></td>
                   </tr>
                   <tr>
                     <td class="date"><p>Mon., January 30</p></td>
-                    <td class="description"><p>Select Your Same Room</p></td>
+                    <td class="description"><p><a href="#">Select Your Same Room</a></p></td>
                   </tr>
                   <tr>
                     <td class="date"><p>Mon., February 6</p></td>
-                    <td class="description"><p>Priority Reservations Open for Any Available Space</p></td>
+                    <td class="description"><p><a href="#">Priority Reservations Open for Any Available Space</a></p></td>
                   </tr>
                   <tr>
                     <td class="date"><p>Fri., February 24</p></td>
-                    <td class="description"><p>Final Priority Reservation Date</p></td>
+                    <td class="description"><p><a href="#">Final Priority Reservation Date</a></p></td>
                   </tr>
                 </table>
             
@@ -96,61 +118,60 @@
             
         	<section class="wrapper twenty-five recontract-2012 seven-twenty-show">
            	  <h2>Recontracting 2012</h2>
-                <img src="assets/more-choices_better-choices.png" alt="More Choices - Better Choices" />
-                <p><a href="http://www.google.com">Single Rooms</a></p>
-                <p><a href="http://www.google.com">Double Room</a></p>
-                <p><a href="http://www.google.com">2, 4, 6-person Apartment Suites</a></p>
-                <p><a href="http://www.google.com">Suites</a></p>
-                <p><a href="http://www.google.com">Meal Plans</a></p>
+                <img src="assets/more-choices_better-choices.png" alt="More Choices - Better Choices" /><br>
+                <p><a href="#">Single Rooms</a></p>
+                <p><a href="#">Double Room</a></p>
+                <p><a href="#">2, 4, 6-person Apartment Suites</a></p>
+                <p><a href="#">Suites</a></p>
+                <p><a href="#">Meal Plans</a></p>
             </section>
             
             <section class="wrapper twenty-five open-house">
            	  <h2>Open House</h2>
             	<h3>Friday January 20</h3>
-                <p><a href="http://www.google.com">Bender, Dancer, Cambell, Lawther</a>
+                <p><a href="#">Bender, Dancer, Cambell, Lawther</a>
                 <p>
                 <p>2-4:30 pm.m</p><br>
-                <p><a href="http://www.google.com">Roth, Hagemann, Noehren, Rider, Shull</a></p>
+                <p><a href="#">Roth, Hagemann, Noehren, Rider, Shull</a></p>
                 <p>3-6 p.m.</p>
             </section>
         </article>
         
         <article id="twoway" class="faq-button">
-            	<a href="http://www.google.com"><img id="faq-button" src="assets/FAQ-empty.png" alt ="Recontracting FAQ: Where? How? When? - links to Frequently Asked Questions page" /></a>
+        	<a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('FAQ','','assets/FAQ-hover.png',1)"><img src="assets/FAQ.png" alt="Recontracting FAQ: Where? How? When?" name="FAQ" width="389" height="64" border="0"></a>
         </article>
         
-		<article id="twoway">
+		<article id="twoway" class="second">
 			<section class="wrapper twenty-five virtual-tours">
 				<h3>Virtual tours</h3>
 				<p>
-					<a href="http://www.google.com">Bender</a><br>
-                    <a href="http://www.google.com">Noehren</a><br>
-                    <a href="http://www.google.com">Cambell</a><br>
-                    <a href="http://www.google.com">Rider</a><br>
-                    <a href="http://www.google.com">Dancer</a><br>
-                    <a href="http://www.google.com">Roth</a><br>
-                    <a href="http://www.google.com">Hagemann</a><br>
-                    <a href="http://www.google.com">Shull</a><br>
-                    <a href="http://www.google.com">Lawther</a>
-                    
-				</p>
+					<a href="#">Bender</a><br>
+                    <a href="#">Noehren</a><br>
+                    <a href="#">Cambell</a><br>
+                    <a href="#">Rider</a><br>
+                    <a href="#">Dancer</a><br>
+                    <a href="#">Roth</a><br>
+                    <a href="#">Hagemann</a><br>
+                    <a href="#">Shull</a><br>
+                    <a href="#">Lawther</a>
+			  </p>
 			</section>
 			<section class="wrapper twenty-five faq">
 				<h3>Frequently Asked Questions</h3>
 				<p>
-					<a href="http://www.google.com">Panther Village</a><br>
-                    <a href="http://www.google.com">Roth</a><br>
-                    <a href="http://www.google.com">Shull</a><br>
-                    <a href="http://www.google.com">Residence Halls</a><br>
-                    <a href="http://www.google.com">Rates</a>
+					<a href="#">Panther Village</a><br>
+                    <a href="#">Roth</a><br>
+                    <a href="#">Shull</a><br>
+                    <a href="#">Residence Halls</a><br>
+                    <a href="#">Rates</a>
 				</p>
 			</section>
 
 			<section class="wrapper twenty-five contract-terms">
 				<h3>Contract Terms</h3>
-				<p>
-					Terms and Conditions
-				</p>
+				<p><a href="#">
+				  Terms and Conditions
+				</a></p>
             </section>
             
             <section class="wrapper twenty-five contact-us">
@@ -158,7 +179,7 @@
                 <p>
                 	Department of Residence <br>
                     (319 273-233 or Toll Free 866-207-9411<br>
-                    live@uni.edu<br>
+                    <a href="mailto:live@uni.edu">live@uni.edu</a><br>
                     <a href="http://www.uni.edu">www.uni.edu</a><br>
                     Facebook: UNIDepartmentofResidence
                 </p>
